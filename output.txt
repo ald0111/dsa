@@ -1,3 +1,1 @@
-[0, 0, 0, 0, 0]
-[0, 0, 0, 0, 0]
-0
+The string A man, a plan, a canal: Panama is palindrome? 1
