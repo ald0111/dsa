@@ -14,6 +14,17 @@
         "isDefault": true
       },
       "problemMatcher": []
+    },
+    {
+      "label": "Build Only",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "ext='${fileExtname}'; file='${file}'; base='${fileBasenameNoExtension}'; build='${workspaceFolder}/build'; mkdir -p \"$build\"; case \"$ext\" in '.cpp') g++ -g \"$file\" -o \"$build/$base.out\" ;; '.c') gcc -g \"$file\" -o \"$build/$base.out\" ;; *) echo \"Unsupported file extension: $ext\"; exit 1 ;; esac"
+      ],
+      "group": "build",
+      "problemMatcher": []
     }
   ]
 }

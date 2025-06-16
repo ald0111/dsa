@@ -2,7 +2,21 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug C/C++ with externalConsole",
+      "name": "(Debug) Build and debug in external console",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/${fileBasenameNoExtension}.out",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "lldb",
+      "preLaunchTask": "Build Only"
+    },
+
+    {
+      "name": "(Debug) Build, Run with input.txt/output.txt",
       "type": "cppdbg",
       "request": "launch",
       "program": "${workspaceFolder}/build/${fileBasenameNoExtension}.out",
