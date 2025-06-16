@@ -7,7 +7,7 @@
       "command": "bash",
       "args": [
         "-c",
-        "ext='${fileExtname}'; file='${file}'; base='${fileBasenameNoExtension}'; build='${workspaceFolder}/build'; in='${workspaceFolder}/input.txt'; out='${workspaceFolder}/output.txt'; mkdir -p \"$build\"; case \"$ext\" in '.cpp') g++ \"$file\" -o \"$build/$base.out\" && \"$build/$base.out\" < \"$in\" > \"$out\" ;; '.c') gcc \"$file\" -o \"$build/$base.out\" && \"$build/$base.out\" < \"$in\" > \"$out\" ;; '.py') python3 \"$file\" < \"$in\" > \"$out\" ;; *) echo \"Unsupported file extension: $ext\"; exit 1 ;; esac"
+        "ext='${fileExtname}'; file='${file}'; base='${fileBasenameNoExtension}'; build='${workspaceFolder}/build'; in='${workspaceFolder}/input.txt'; out='${workspaceFolder}/output.txt'; mkdir -p \"$build\"; case \"$ext\" in '.cpp') g++ -g \"$file\" -o \"$build/$base.out\" && \"$build/$base.out\" < \"$in\" > \"$out\" ;; '.c') gcc -g \"$file\" -o \"$build/$base.out\" && \"$build/$base.out\" < \"$in\" > \"$out\" ;; '.py') python3 \"$file\" < \"$in\" > \"$out\" ;; *) echo \"Unsupported file extension: $ext\"; exit 1 ;; esac"
       ],
       "group": {
         "kind": "build",
