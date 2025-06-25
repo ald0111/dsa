@@ -20,6 +20,8 @@ void selection_sort(int arr[], int n)
     }
     return;
 }
+// worst case O(n^2)
+// best case O(n^2)
 
 int main()
 {
