@@ -1,2 +1,1 @@
-Highest element is 1
-lowest element is 7
+1 2 3 4 5 
